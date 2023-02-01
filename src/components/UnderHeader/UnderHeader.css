@@ -1,0 +1,64 @@
+.underHeader-wrapper {
+  background: #0e1527;
+  height: 100vh;
+  color: white;
+  margin-top: 70px;
+}
+
+.underHeader_item {
+  padding: 0 50px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.common-underHeader-div {
+  width: 48%;
+}
+
+.my-text-underHeader h2,
+.my-text-underHeader h1 {
+  font-size: 35px;
+  margin: 8px 0;
+}
+.my-text-underHeader h2 span {
+  color: #16a6ee;
+}
+.my-text-underHeader p {
+  margin-top: 15px;
+  text-transform: lowercase;
+  font-size: 17px;
+}
+.underHeader-buttons {
+  display: flex;
+  margin-top: 30px;
+}
+
+.underHeader-buttons button {
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background: #16a6ee;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  transition: all .2 ease-in-out;
+}
+.underHeader-buttons button:hover {
+    background: #0f86c2;
+}
+
+.underHeader-buttons button:last-child {
+    background:#1E293B;
+}
+
+.underHeader-buttons button:last-child:hover {
+    background:#2c3d5a;
+}
+.underHeader-img-side img {
+  width: 90%;
+}

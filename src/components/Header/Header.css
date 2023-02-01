@@ -1,19 +1,20 @@
 .header-wrapper {
   width: 100%;
   position: fixed;
+  top: 0;
 }
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  border-bottom: 1px solid rgb(40, 45, 75);
-  background: #0B1222;
+  border-bottom: 1px solid rgba(40, 45, 75);
+  background: #0b1222;
   filter: blur(20%);
 }
 
 .header h2 a {
-  color: #16a6ee;;
+  color: #16a6ee;
   text-decoration: none;
   font-weight: bolder;
 }
@@ -30,10 +31,10 @@
   background: #1E293B;
 }
 .nav-item button {
-  padding: 6px 10px;
+  padding: 6px 20px;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   background: #0284C7;
   color: white;

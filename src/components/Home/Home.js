@@ -1,9 +1,10 @@
 import React from "react";
+import UnderHeader from "../UnderHeader/UnderHeader";
 import "./Home.module.css";
 const Home = () => {
   return (
     <div>
-      <div>Home</div>
+       <UnderHeader></UnderHeader>
     </div>
   );
 };

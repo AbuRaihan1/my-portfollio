@@ -16,8 +16,7 @@ const Header = () => {
           <Link to="/contact">Contact</Link>
           <button>
             <div className="btn-wrap-login">
-              <span>Login</span>{" "}
-              <ArrowLeftOnRectangleIcon className="logoutIcon" />{" "}
+              <span>Login</span>
             </div>
           </button>
         </div>

@@ -46,19 +46,36 @@
   color: white;
   font-weight: bold;
   font-size: 17px;
-  transition: all .2 ease-in-out;
+  transition: all 0.2 ease-in-out;
 }
 .underHeader-buttons button:hover {
-    background: #0f86c2;
+  background: #0f86c2;
 }
 
 .underHeader-buttons button:last-child {
-    background:#1E293B;
+  background: #1e293b;
 }
 
 .underHeader-buttons button:last-child:hover {
-    background:#2c3d5a;
+  background: #2c3d5a;
 }
 .underHeader-img-side img {
   width: 90%;
+}
+
+@media screen and (max-width: 762px) {
+  .underHeader-wrapper {
+    height: 100%;
+  }
+  .underHeader_item {
+    display: block;
+  }
+  .common-underHeader-div {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .underHeader_item {
+    padding: 0 20px;
+    padding-top: 50px;
+  }
 }

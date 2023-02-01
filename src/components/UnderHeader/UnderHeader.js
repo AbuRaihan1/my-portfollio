@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TypeWriterEffect from "react-typewriter-effect";
 import logo from "../../logo.svg";
 import "./UnderHeader.css";
@@ -40,7 +41,9 @@ const UnderHeader = () => {
             </p>
             <div className="underHeader-buttons">
               <button>Download Cv</button>
-              <button>Contact</button>
+              <Link to="/contact">
+                <button>Contact</button>
+              </Link>
             </div>
           </div>
         </div>

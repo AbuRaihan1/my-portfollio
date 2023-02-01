@@ -1,10 +1,11 @@
 import React from "react";
-import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/solid";
+import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import "./Header.css";
+// import ParticlesBackground from "../Particles/ParticlesBackground";
 const Header = () => {
   return (
-    <div>
+    <div className="header-wrapper">
       <div className="header">
         <h2>
           <Link to="/">Raihan</Link>
@@ -16,10 +17,11 @@ const Header = () => {
           <button>
             <div className="btn-wrap-login">
               <span>Login</span>{" "}
-              <ArrowRightOnRectangleIcon className="logoutIcon" />{" "}
+              <ArrowLeftOnRectangleIcon className="logoutIcon" />{" "}
             </div>
           </button>
         </div>
+        {/* <ParticlesBackground></ParticlesBackground> */}
       </div>
     </div>
   );

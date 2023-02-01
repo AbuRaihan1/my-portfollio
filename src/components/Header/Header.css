@@ -1,13 +1,21 @@
+.header-wrapper {
+  width: 100%;
+  position: fixed;
+}
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  border-bottom: 1px solid rgb(40, 45, 75);
+  background: #0B1222;
+  filter: blur(20%);
 }
 
 .header h2 a {
-  color: white;
+  color: #16a6ee;;
   text-decoration: none;
+  font-weight: bolder;
 }
 .nav-item a {
   text-decoration: none;
@@ -19,7 +27,7 @@
   border-radius: 5px;
 }
 .nav-item a:hover {
-  background: #313950;
+  background: #1E293B;
 }
 .nav-item button {
   padding: 6px 10px;
@@ -27,14 +35,14 @@
   outline: none;
   border-radius: 5px;
   cursor: pointer;
-  background: #313950;
+  background: #0284C7;
   color: white;
   font-weight: bold;
   font-size: 16px;
   transition: all 0.2s ease-in-out;
 }
 .nav-item button:hover {
-  background: #272e42;
+  background: #047ab6;
 }
 .btn-wrap-login {
   display: flex;

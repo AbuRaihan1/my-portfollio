@@ -32,6 +32,7 @@
   text-transform: lowercase;
   font-size: 17px;
   font-family: "Poppins", sans-serif;
+  color: rgb(204, 197, 197);
 }
 .underHeader-buttons {
   display: flex;

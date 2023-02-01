@@ -1,3 +1,28 @@
 .about {
-  background: #0F172A;
+  background: #0d1425;
+  padding: 50px;
+}
+.about-content-devide {
+  display: flex;
+  align-items: center;
+}
+.about-text-content p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.inner-about-content {
+  color: #bbbfc5;
+  margin-top: 30px;
+}
+
+.inner-about-content > div {
+  margin-bottom: 10px;
+}
+
+.aboutInnerIcon {
+  font-size: 12px;
+  height: 20px;
+  width: 20px;
+  color: #119ae9;
+  margin-right: 10px;
 }

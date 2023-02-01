@@ -1,0 +1,22 @@
+.social {
+  background: #0b1120;
+  padding: 30px 0;
+  border-top: 1px solid ;
+}
+
+.icons-wrapper {
+    text-align: center;
+}
+
+.icons-wrapper .footerIcons {
+    /* color: #16a6ee; */
+    font-size: 20px;
+    margin: 5px 10px;
+    background: #16A6EE;
+    color: white;
+    /* padding: 20px; */
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 5px;
+}

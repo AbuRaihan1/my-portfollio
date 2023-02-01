@@ -1,0 +1,25 @@
+.errorpage {
+    padding-bottom: 40px;
+}
+.errorpage img {
+  width: 100%;
+  height: 90vh;
+}
+
+.errorpage h2 {
+    text-align: center;
+}
+
+.errorpage a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: #16a6ee;
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+}

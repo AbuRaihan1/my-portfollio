@@ -21,6 +21,7 @@
 .my-text-underHeader h1 {
   font-size: 35px;
   margin: 8px 0;
+  font-family: "Roboto", sans-serif;
 }
 .my-text-underHeader h2 span {
   color: #16a6ee;
@@ -29,6 +30,7 @@
   margin-top: 15px;
   text-transform: lowercase;
   font-size: 17px;
+  font-family: "Poppins", sans-serif;
 }
 .underHeader-buttons {
   display: flex;

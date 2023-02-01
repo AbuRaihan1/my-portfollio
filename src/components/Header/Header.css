@@ -10,7 +10,6 @@
   padding: 0 40px;
   border-bottom: 1px solid rgba(40, 45, 75);
   background: #0b1222;
-  filter: blur(20%);
 }
 
 .header h2 a {
@@ -28,7 +27,7 @@
   border-radius: 5px;
 }
 .nav-item a:hover {
-  background: #1E293B;
+  background: #1e293b;
 }
 .nav-item button {
   padding: 6px 20px;
@@ -36,7 +35,7 @@
   outline: none;
   border-radius: 4px;
   cursor: pointer;
-  background: #0284C7;
+  background: #0284c7;
   color: white;
   font-weight: bold;
   font-size: 16px;

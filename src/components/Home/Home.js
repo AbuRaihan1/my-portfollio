@@ -4,7 +4,7 @@ import "./Home.module.css";
 const Home = () => {
   return (
     <div>
-       <UnderHeader></UnderHeader>
+      <UnderHeader></UnderHeader>
     </div>
   );
 };

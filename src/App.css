@@ -1,4 +1,17 @@
-/* .body-wrapper {
-  background: #0F1729;
-  color: white;
-} */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04070c;
+  box-shadow: inset 1px 1px 5px rgb(17, 50, 59);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #182749;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #182749;
+}

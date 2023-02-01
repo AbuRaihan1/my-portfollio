@@ -1,8 +1,9 @@
 .underHeader-wrapper {
   background: #0e1527;
-  height: 100vh;
+  height: 100%;
   color: white;
   margin-top: 70px;
+  padding-bottom: 50px;
 }
 
 .underHeader_item {

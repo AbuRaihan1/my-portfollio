@@ -1,0 +1,41 @@
+.project {
+  padding: 70px 0;
+  background: #0f172a;
+}
+.projects-wrapper a {
+  text-decoration: none;
+  color: white;
+}
+.projects-wrapper a:hover {
+  color: white;
+}
+.projects-item-wrapper img {
+  width: 100%;
+}
+
+.projects-item-wrapper {
+  border: 1px solid #1d2431;
+  border-radius: 5px;
+  margin: 15px 0;
+  transition: all 0.2s ease-in-out;
+}
+.projects-item-wrapper:hover {
+  background: #00000065;
+}
+.projects-wrapper-text {
+  padding: 20px;
+}
+
+.projects-wrapper-text button {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  background: #16a6ee;
+  width: 100%;
+}
+.projects-wrapper-text button:hover {
+    background: #1383bb;
+}

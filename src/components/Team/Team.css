@@ -16,6 +16,12 @@
   display: block;
   text-align: center;
   margin: auto;
+  margin-bottom: 15px;
+}
+
+.carousel-item p {
+    font-family: 'poppins', sans-serif;
+    color: #c6c8cf;
 }
 
 .team-member {

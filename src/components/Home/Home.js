@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../About/About";
 import Skills from "../skills/Skills";
+import Team from "../Team/Team";
 import UnderHeader from "../UnderHeader/UnderHeader";
 import "./Home.module.css";
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
       <UnderHeader></UnderHeader>
       <About></About>
       <Skills></Skills>
-      {/* <Articles></Articles> */}
+      <Team></Team>
     </div>
   );
 };

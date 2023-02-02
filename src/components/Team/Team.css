@@ -1,0 +1,37 @@
+.team {
+  background: #0e1527;
+  border-top: 1px solid #282d4b;
+  padding: 50px 0;
+}
+.carousel-item {
+  padding: 50px;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.team-member {
+  text-align: center;
+  color: white;
+}
+
+.carousel-indicators button {
+  height: 0px !important;
+  width: 20px !important;
+  background: #16a6ee !important;
+  border-radius: 50%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background: #16a6ee;
+  border-radius: 50%;
+}

@@ -9,6 +9,7 @@ const Home = () => {
       <UnderHeader></UnderHeader>
       <About></About>
       <Skills></Skills>
+      {/* <Articles></Articles> */}
     </div>
   );
 };

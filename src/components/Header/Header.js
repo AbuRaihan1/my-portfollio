@@ -22,9 +22,10 @@ const Header = () => {
         </h2>
         <div className="nav-item" id="navItems">
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          {/* <Link to="/about">About</Link> */}
           <Link to="/services">Services</Link>
-          <Link to="/project">Project</Link>
+          <Link to="/project">Projects</Link>
+          <Link to="/articles">Articles</Link>
           <Link to="/contact">Contact</Link>
           <button>
             <div className="btn-wrap-login">

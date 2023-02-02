@@ -9,10 +9,11 @@
   border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
-  background: #161e2d;
+  background: #0B1120;
   padding: 10px;
   color: white;
   margin-top: 20px;
+  border: 1px solid #1D2431;
 }
 
 .contact input:focus {
@@ -24,7 +25,8 @@
   border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
-  background: #161e2d;
+  background: #0B1120;
+  border: 1px solid #1D2431;
   padding: 10px;
   color: white;
   margin-top: 20px;

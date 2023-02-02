@@ -56,7 +56,7 @@ const About = () => {
                     <i>
                       <InboxIcon className="aboutInnerIcon" />
                     </i>
-                    <b>Email : </b> <span>raihanahmed01973@gmail.com</span>
+                    <b>: </b> <span>raihanahmed01973@gmail.com</span>
                   </div>
                 </div>
               </Col>

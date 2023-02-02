@@ -6,6 +6,7 @@
 .about-content-devide {
   display: flex;
   align-items: center;
+ 
 }
 .about-text-content p {
   color: white;
@@ -14,6 +15,10 @@
 .inner-about-content {
   color: #bbbfc5;
   margin-top: 30px;
+  background: #0B1120;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #1D2431;
 }
 
 .inner-about-content > div {

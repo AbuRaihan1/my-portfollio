@@ -1,5 +1,5 @@
 .team {
-  background: #0e1527;
+  background: #0d1425;
   border-top: 1px solid #282d4b;
   padding: 50px 0;
 }
@@ -20,8 +20,8 @@
 }
 
 .carousel-item p {
-    font-family: 'poppins', sans-serif;
-    color: #c6c8cf;
+  font-family: "poppins", sans-serif;
+  color: #c6c8cf;
 }
 
 .team-member {

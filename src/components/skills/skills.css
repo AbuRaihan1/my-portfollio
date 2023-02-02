@@ -1,0 +1,45 @@
+.skills {
+  /* background: #172132; */
+  background: #0d1425;
+  padding-bottom: 50px;
+  border-top: 1px solid #282d4b;
+}
+
+.sikklsItem {
+  background: #172132;
+  border: 1px solid #353c4d;
+  padding: 3px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: white;
+  transition: 0.2s;
+}
+
+.sikklsItem:hover {
+  transform: scale(1.05);
+}
+
+.sikklsItem img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+
+.sikklsItem h2 {
+  font-size: 21px;
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+.skillsNametext {
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.skillsNametext p {
+  color: rgb(165, 158, 158);
+}

@@ -1,8 +1,8 @@
 .section-title-wrapper {
-  /* background: #0f172a; */
   padding: 30px 0;
-  border-top: 1px solid #282d4b;
+  /* border-top: 1px solid #282d4b; */
   position: relative;
+  padding-top: 50px;
 }
 
 .section-title-wrapper h2 {

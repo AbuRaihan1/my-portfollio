@@ -1,6 +1,7 @@
 .about {
   background: #0d1425;
   padding-top: 80px;
+  border-top: 1px solid #282d4b;
 }
 .about-content-devide {
   display: flex;

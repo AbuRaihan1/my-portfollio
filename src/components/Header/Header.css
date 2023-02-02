@@ -32,6 +32,11 @@
   background: #1e293b;
   color: white;
 }
+
+.nav-item .active-link {
+  color: #16a6ee;
+  background: #1e293b;
+}
 .nav-item button {
   padding: 6px 20px;
   border: none;

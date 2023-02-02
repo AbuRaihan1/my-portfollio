@@ -1,6 +1,6 @@
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 // import ParticlesBackground from "../Particles/ParticlesBackground";
 const Header = () => {
@@ -21,12 +21,11 @@ const Header = () => {
           <Link to="/">Raihan</Link>
         </h2>
         <div className="nav-item" id="navItems">
-          <Link to="/">Home</Link>
-          {/* <Link to="/about">About</Link> */}
-          <Link to="/services">Services</Link>
-          <Link to="/project">Projects</Link>
-          <Link to="/articles">Articles</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/">Home</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/services">Services</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/project">Projects</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/articles">Articles</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/contact">Contact</NavLink>
           <button>
             <div className="btn-wrap-login">
               <span>Login</span>

@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import loginImage from "./login.gif";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, error } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -30,14 +30,25 @@ const Register = () => {
             <Col md="6">
               <div className="login-content-wrapper">
                 <div className="login-area">
-                  <input type="text" placeholder="Your name" name="name" />
-                  <input type="email" placeholder="Your email" name="email" />
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    name="name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    name="email"
+                    required
+                  />
                   <input
                     type="password"
                     placeholder="******"
                     name="password"
+                    required
                   />{" "}
-                  <p> password should be at least 6 character</p>
+                  <p>{error}</p>
                   <button>Register</button>
                 </div>
               </div>

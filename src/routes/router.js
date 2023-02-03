@@ -3,7 +3,8 @@ import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import ErrorElements from "../components/ErrorElements/ErrorElements";
 import Home from "../components/Home/Home";
-import Login from "../components/Login/Login";
+import Login from "../components/LoginAndRegister/Login";
+import Register from "../components/LoginAndRegister/Register";
 import Project from "../components/Project/Project";
 import Articles from "../components/QuotesAndArticles/Articles";
 import Services from "../components/Services/Services";
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },

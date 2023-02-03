@@ -18,6 +18,8 @@
   border-radius: 5px;
   margin: 15px 0;
   transition: all 0.2s ease-in-out;
+  min-height: 400px;
+  position: relative;
 }
 .projects-item-wrapper:hover {
   background: #00000065;
@@ -26,16 +28,26 @@
   padding: 20px;
 }
 
+.projects-wrapper-text p {
+  font-size: 17px;
+  color: #8c8f94;
+  font-weight: bold;
+  /* margin-bottom: 10px !important; */
+}
+
 .projects-wrapper-text button {
   border: none;
   outline: none;
   padding: 10px 30px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   font-weight: bold;
   color: white;
   background: #16a6ee;
   width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
 }
 .projects-wrapper-text button:hover {
-    background: #1383bb;
+  background: #1383bb;
 }

@@ -9,6 +9,7 @@
   color: white;
   text-align: center;
   font-size: 40px;
+  font-family: 'Itim', cursive;
 }
 
 .section-title-wrapper h2::before {

@@ -12,7 +12,17 @@ export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const UserContext = ({ children }) => {
-  const authInfo = "amar sonar bangla";
+  const createUser = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  const authInfo = { createUser };
   return (
     <div>
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

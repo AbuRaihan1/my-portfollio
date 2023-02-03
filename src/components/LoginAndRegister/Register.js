@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import loginImage from "./login.gif";
 import "./login.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Contexts/UserContext";
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password);
+  };
   return (
     <div className="login">
-      <form className="login-content">
+      <form className="login-content" onSubmit={handleRegister}>
         <h2>Register Here </h2>
         <div className="loginSignUp">
           <Link to="/login">Login</Link>

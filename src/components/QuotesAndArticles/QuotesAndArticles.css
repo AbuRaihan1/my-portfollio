@@ -9,7 +9,7 @@
   border: 1px solid rgba(66, 172, 243, 0.26);
   border-radius: 5px;
   margin: 15px 0;
-  min-height: 450px;
+  min-height: 470px;
 }
 
 .articles-content img {
@@ -105,7 +105,6 @@
 
 .articles-content-warpper {
   /* border: 2px solid red; */
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -114,8 +113,4 @@
 
 .full-article {
   display: none;
-}
-
-.article-content-another-section {
-  /* position: relative; */
 }

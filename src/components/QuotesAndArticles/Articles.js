@@ -1,67 +1,53 @@
-import React from "react";
-import "./QuotesAndArticles.css";
-import SectionTitle from "../SectionTItle/SectionTitle";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { FaTimes } from "react-icons/fa";
+import { useLoaderData } from "react-router-dom";
+import SectionTitle from "../SectionTItle/SectionTitle";
 import github from "../skills/skillsiImg/github.png";
 import Quotes from "./Quotes";
+import "./QuotesAndArticles.css";
 const Articles = () => {
+  const articles = useLoaderData();
+  const [openArticle, setOpenArticle] = useState(false);
+  console.log(articles);
+
+  const openArticleHandle = () => {
+    setOpenArticle(!openArticle);
+    const closeBtn = document.getElementById("closeOpenArticles");
+    const fullArticles = document.querySelector(".full-article");
+    if (!openArticle) {
+      fullArticles.style.display = "none";
+    } else {
+      fullArticles.style.display = "block";
+    }
+  };
+
+
   return (
     <div className="articles">
       <SectionTitle title="Quotes and articles"></SectionTitle>
       <Container>
         <Row>
-        <Quotes></Quotes>
+          <Quotes></Quotes>
+
           <Col lg="4" md="6">
             <div className="articles-content">
               <img src={github} alt="" />
               <div className="articles-text">
-                <h3>Title</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                  architecto modi quae ullam corporis odit inventore repudiandae
-                  asperiores consequuntur quos corrupti, voluptatibus cum autem!
-                  Dolor accusantium, aliquam quis molestias obcaecati saepe
-                  quisquam eum at alias! Dolores enim aut repellat soluta.
-                </p>
-                <button>Read more...</button>
-              </div>
-            </div>
-          </Col>
-          <Col lg="4" md="6">
-            <div className="articles-content">
-              <img src={github} alt="" />
-              <div className="articles-text">
-                <h3>Title</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                  architecto modi quae ullam corporis odit inventore repudiandae
-                  asperiores consequuntur quos corrupti, voluptatibus cum autem!
-                  Dolor accusantium, aliquam quis molestias obcaecati saepe
-                  quisquam eum at alias! Dolores enim aut repellat soluta.
-                </p>
-                <button>Read more...</button>
-              </div>
-            </div>
-          </Col>
-          <Col lg="4" md="6">
-            <div className="articles-content">
-              <img src={github} alt="" />
-              <div className="articles-text">
-                <h3>Title</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                  architecto modi quae ullam corporis odit inventore repudiandae
-                  asperiores consequuntur quos corrupti, voluptatibus cum autem!
-                  Dolor accusantium, aliquam quis molestias obcaecati saepe
-                  quisquam eum at alias! Dolores enim aut repellat soluta.
-                </p>
+               {
+              articles.map(article => console.log(article))
+               }
                 <button>Read more...</button>
               </div>
             </div>
           </Col>
         </Row>
-        
       </Container>
+      <div className="full-article">
+        <button onClick={openArticleHandle} id="closeOpenArticles">
+          <FaTimes />
+        </button>
+      </div>
     </div>
   );
 };

@@ -26,11 +26,12 @@ const Header = () => {
           <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/project">Projects</NavLink>
           <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/articles">Articles</NavLink>
           <NavLink className={({ isActive }) => (isActive ? 'active-link' : undefined)} to="/contact">Contact</NavLink>
+          <Link to="/login" className="login-link">
           <button>
             <div className="btn-wrap-login">
               <span>Login</span>
             </div>
-          </button>
+          </button></Link>
         </div>
 
         {/* <ParticlesBackground></ParticlesBackground> */}

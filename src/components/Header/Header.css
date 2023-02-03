@@ -27,7 +27,6 @@
   font-weight: bold;
   transition: all 0.2s ease-in-out;
   border-radius: 5px;
-  
 }
 .nav-item a:hover {
   background: #1e293b;
@@ -98,13 +97,16 @@
   .nav-item a {
     display: block;
     margin: 10px;
-  
   }
 
   .navIcon .xmarkIcon,
   .barsIcon {
     display: block;
   }
+}
+
+.login-link:hover {
+  background: transparent !important;
 }
 
 /* @media screen and (max-width: 762px) {

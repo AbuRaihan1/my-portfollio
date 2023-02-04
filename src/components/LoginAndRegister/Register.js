@@ -6,7 +6,7 @@ import { AuthContext } from "../../Contexts/UserContext";
 import "./login.css";
 import loginImage from "./login.gif";
 const Register = () => {
-  const { createUser, error, setError, updateUserName } =
+  const { createUser, error, setError, updateUserName, googleSinIn } =
     useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -38,6 +38,10 @@ const Register = () => {
           setError(error.message);
         }
       });
+  };
+
+  const handleGoogleSingIn = () => {
+    googleSinIn();
   };
 
   return (
@@ -76,10 +80,6 @@ const Register = () => {
                   <p>{error}</p>
                   <button>Register</button>
                   <div className="or-wrapper">or</div>
-                  <div className="continue-with-btns">
-                    <button>Continue with google</button>
-                    <button>Continue with github</button>
-                  </div>
                 </div>
               </div>
             </Col>
@@ -91,6 +91,10 @@ const Register = () => {
           </Row>
         </Container>
       </form>
+      <div className="continue-with-btns">
+        <button onClick={handleGoogleSingIn}>Continue with google</button>
+        <button>Continue with github</button>
+      </div>
     </div>
   );
 };

@@ -31,8 +31,12 @@ const UserContext = ({ children }) => {
         console.log(error.message);
       });
   };
-  
-  const authInfo = { setError, error, createUser, updateUserName };
+
+  // sing in user, with email and password
+  const logIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+  const authInfo = { setError, error, createUser, updateUserName, logIn };
   return (
     <div>
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

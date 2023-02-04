@@ -1,4 +1,4 @@
-import React, { useContext,} from "react";
+import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import loginImage from "./login.gif";
 import "./login.css";
@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";
 import Swal from "sweetalert2";
 const Register = () => {
-  const { createUser, error, setError, updateUserName } = useContext(AuthContext);
+  const { createUser, error, setError, updateUserName } =
+    useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -20,7 +21,6 @@ const Register = () => {
         Swal.fire("congrats!", "you are Registred now", "success");
         form.reset();
         updateUserName(name);
-        console.log(result.user);
       })
       .catch((error) => {
         if (

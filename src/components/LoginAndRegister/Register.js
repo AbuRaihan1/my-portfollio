@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import loginImage from "./login.gif";
-import "./login.css";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Contexts/UserContext";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Contexts/UserContext";
+import "./login.css";
+import loginImage from "./login.gif";
 const Register = () => {
   const { createUser, error, setError, updateUserName } =
     useContext(AuthContext);
@@ -27,10 +27,13 @@ const Register = () => {
           error.message ===
           "Firebase: Password should be at least 6 characters (auth/weak-password)."
         ) {
-          setError("Password should be at least 6 character");
+          return setError("Password should be at least 6 character");
+        }
+        if (error.message === "Firebase: Error (auth/invalid-email).") {
+          return setError("invalid email address.");
         }
         if (error.message === "Firebase: Error (auth/email-already-in-use).") {
-          setError("This email is already taken. use another email");
+          return setError("This email is already taken. use another email");
         } else {
           setError(error.message);
         }
@@ -72,6 +75,11 @@ const Register = () => {
                   />{" "}
                   <p>{error}</p>
                   <button>Register</button>
+                  <div className="or-wrapper">or</div>
+                  <div className="continue-with-btns">
+                    <button>Continue with google</button>
+                    <button>Continue with github</button>
+                  </div>
                 </div>
               </div>
             </Col>

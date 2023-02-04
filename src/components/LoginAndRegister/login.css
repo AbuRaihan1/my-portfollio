@@ -2,11 +2,12 @@
   padding: 80px 0;
   padding-top: 120px;
   background: #1e293b;
+  background-attachment: fixed;
 }
 .login-content {
   background: #0d1425;
-  width: 97%;
-  margin-left: 1.5%;
+  width: 94%;
+  margin-left: 3%;
   border-radius: 10px;
 }
 .login h2 {
@@ -46,10 +47,11 @@
   padding: 10px 25px;
   border-radius: 5px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: white;
   font-weight: bold;
   font-size: 17px;
+  transition: all 0.2s ease-in-out;
 }
 
 .login-content-wrapper button:hover {
@@ -81,4 +83,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.or-wrapper {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.or-wrapper::before {
+  content: "";
+  height: 1px;
+  width: 48%;
+  background: #1d2431;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  text-align: center;
+}
+
+.or-wrapper::after {
+  content: "";
+  height: 1px;
+  width: 48%;
+  background: #1d2431;
+  position: absolute;
+  right: 0px;
+  top: 13px;
+}
+
+.continue-with-btns {
+  display: flex;
+  gap: 10px;
+}
+.continue-with-btns button {
+  border-radius: 50px;
+  /* background: #10191d;0 */
+  background: transparent;
+  border: 1px solid #1d2431;
+}
+
+@media screen and (max-width: 1202px) {
+  .continue-with-btns button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .continue-with-btns {
+    display: block;
+    flex-direction: column;
+  }
 }

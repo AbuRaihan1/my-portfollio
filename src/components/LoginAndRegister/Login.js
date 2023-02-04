@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import loginImage from "./login.gif";
+import loginImage from './Key.gif'
 import "./login.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";

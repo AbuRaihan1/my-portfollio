@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import loginImage from "./login.gif";
 import "./login.css";
@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";
 import Swal from "sweetalert2";
 const Login = () => {
-  const { logIn, error, setError } = useContext(AuthContext);
+  const [userEmail, setUserEmail] = useState("");
+  const { logIn, error, setError, resetPassword } = useContext(AuthContext);
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -31,6 +32,13 @@ const Login = () => {
         }
       });
   };
+
+  const handleResetUserPass = () => {
+    // if (!userEmail) {
+    //   setError("Enter your registered email first");
+    // }
+    resetPassword(userEmail);
+  };
   return (
     <div className="login">
       <form className="login-content" onSubmit={handleLoginSubmit}>
@@ -51,6 +59,7 @@ const Login = () => {
                     placeholder="email"
                     name="email"
                     required
+                    onBlur={(e) => setUserEmail(e.target.value)}
                   />
                   <input
                     type="password"
@@ -59,7 +68,9 @@ const Login = () => {
                     required
                   />{" "}
                   <p>{error}</p>
-                  <Link to="#">Forget password?</Link>
+                  <Link to="#" onClick={handleResetUserPass}>
+                    Forget password?
+                  </Link>
                   <button>Log in </button>
                 </div>
               </div>

@@ -40,7 +40,7 @@
   border: 1px solid #16a6ee;
 }
 
-.login-content-wrapper button {
+.login-content button {
   background: #16a6ee;
   border: none;
   outline: none;
@@ -54,7 +54,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.login-content-wrapper button:hover {
+.login-content button:hover {
   background: #198bc4;
 }
 .login-content-wrapper p {

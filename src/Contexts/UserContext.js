@@ -8,6 +8,7 @@ import {
   updateProfile,
   signInWithPopup,
   GoogleAuthProvider,
+  GithubAuthProvider,
 } from "firebase/auth";
 
 import React, { createContext, useState } from "react";
@@ -19,6 +20,7 @@ const auth = getAuth(app);
 const UserContext = ({ children }) => {
   // auth providers.
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
   const [error, setError] = useState("");
 
   // create user
@@ -68,15 +70,27 @@ const UserContext = ({ children }) => {
   };
 
   // sign in with google
-  const googleSinIn = () => {
+  const googleSignIn = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        console.log(result.user);
+        Swal.fire("Logged in", "you are logged in by Google", "success");
       })
       .catch((error) => {
         console.log(error.message);
       });
   };
+
+  // sign in with github
+  const githubSignIn = () => {
+    signInWithPopup(auth, githubProvider)
+      .then((result) => {
+        Swal.fire("Logged in", "you are logged in by github", "success");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   const authInfo = {
     setError,
     error,
@@ -84,7 +98,8 @@ const UserContext = ({ children }) => {
     updateUserName,
     logIn,
     resetPassword,
-    googleSinIn,
+    googleSignIn,
+    githubSignIn,
   };
   return (
     <div>

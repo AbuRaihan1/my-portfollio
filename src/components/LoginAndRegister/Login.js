@@ -7,7 +7,8 @@ import { AuthContext } from "../../Contexts/UserContext";
 import Swal from "sweetalert2";
 const Login = () => {
   const [userEmail, setUserEmail] = useState("");
-  const { logIn, error, setError, resetPassword } = useContext(AuthContext);
+  const { logIn, error, setError, resetPassword, googleSignIn, githubSignIn } =
+    useContext(AuthContext);
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -34,11 +35,16 @@ const Login = () => {
   };
 
   const handleResetUserPass = () => {
-    // if (!userEmail) {
-    //   setError("Enter your registered email first");
-    // }
     resetPassword(userEmail);
   };
+
+  const handleGoogleSingIn = () => {
+    googleSignIn();
+  };
+  const handleGithubSignIn = () => {
+    githubSignIn();
+  };
+
   return (
     <div className="login">
       <form className="login-content" onSubmit={handleLoginSubmit}>
@@ -74,8 +80,12 @@ const Login = () => {
                   <button>Log in </button>
                   <div className="or-wrapper">or</div>
                   <div className="continue-with-btns">
-                    <button>Continue with google</button>
-                    <button>Continue with github</button>
+                    <button onClick={handleGoogleSingIn}>
+                      Continue with google
+                    </button>
+                    <button onClick={handleGithubSignIn}>
+                      Continue with github
+                    </button>
                   </div>
                 </div>
               </div>

@@ -4,8 +4,9 @@ import loginImage from "./login.gif";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";
+import Swal from "sweetalert2";
 const Register = () => {
-  const { createUser, error } = useContext(AuthContext);
+  const { createUser, error, setError } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,8 +14,27 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    createUser(email, password);
+    createUser(email, password)
+      .then((result) => {
+        setError("");
+        Swal.fire("congrats!", "you are Registred now", "success");
+        form.reset();
+      })
+      .catch((error) => {
+        if (
+          error.message ===
+          "Firebase: Password should be at least 6 characters (auth/weak-password)."
+        ) {
+          setError("Password should be at least 6 character");
+        }
+        if (error.message === "Firebase: Error (auth/email-already-in-use).") {
+          setError("This email is already taken. use another email");
+        } else {
+          setError(error.message);
+        }
+      });
   };
+
   return (
     <div className="login">
       <form className="login-content" onSubmit={handleRegister}>

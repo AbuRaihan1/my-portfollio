@@ -110,7 +110,12 @@
 }
 
 .welcome-user {
+  border: 1px solid #222938 !important;
+  cursor: text;
+}
+.welcome-user span {
   color: #0284c7 !important;
+  margin-left: 3px;
 }
 .welcome-user:hover {
   background: transparent !important;

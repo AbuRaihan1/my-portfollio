@@ -12,14 +12,13 @@ import {
 } from "firebase/auth";
 
 import React, { createContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import app from "../firebase/firebase.config";
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const UserContext = ({ children }) => {
-  // const navigate = useNavigate()
   // auth providers.
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
@@ -74,26 +73,12 @@ const UserContext = ({ children }) => {
 
   // sign in with google
   const googleSignIn = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        Swal.fire("Logged in", "you are logged in by Google", "success");
-        // navigate('/')
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
 
   // sign in with github
   const githubSignIn = () => {
-    signInWithPopup(auth, githubProvider)
-      .then((result) => {
-        Swal.fire("Logged in", "you are logged in by github", "success");
-        // navigate('/')
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    return signInWithPopup(auth, githubProvider);
   };
 
   // store user value

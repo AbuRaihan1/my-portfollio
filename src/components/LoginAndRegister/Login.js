@@ -43,10 +43,24 @@ const Login = () => {
   };
 
   const handleGoogleSingIn = () => {
-    googleSignIn();
+    googleSignIn()
+      .then((result) => {
+        Swal.fire("Logged in", "you are logged in by google", "success");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   const handleGithubSignIn = () => {
-    githubSignIn();
+    githubSignIn()
+      .then((result) => {
+        Swal.fire("Logged in", "you are logged in by github", "success");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (

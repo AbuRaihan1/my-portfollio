@@ -6,7 +6,7 @@ import { AuthContext } from "../../Contexts/UserContext";
 import "./login.css";
 import loginImage from "./login.gif";
 const Register = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const {
     createUser,
     error,
@@ -28,7 +28,7 @@ const Register = () => {
         Swal.fire("congrats!", "you are Registred now", "success");
         form.reset();
         updateUserName(name);
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         if (
@@ -49,10 +49,24 @@ const Register = () => {
   };
 
   const handleGoogleSingIn = () => {
-    googleSignIn();
+    googleSignIn()
+      .then((result) => {
+        Swal.fire("Logged in", "you are logged in by google", "success");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   const handleGithubSignIn = () => {
-    githubSignIn();
+    githubSignIn()
+      .then((result) => {
+        Swal.fire("Logged in", "you are logged in by github", "success");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (

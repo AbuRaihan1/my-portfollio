@@ -55,7 +55,7 @@ const Header = () => {
           </NavLink>
           {user?.uid && (
             <Link to="" className="welcome-user">
-              welcome, {user.displayName}
+              welcome, <span>{user.displayName}</span>
             </Link>
           )}
 

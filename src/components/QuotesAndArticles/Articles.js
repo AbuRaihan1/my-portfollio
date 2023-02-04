@@ -9,14 +9,12 @@ import "./QuotesAndArticles.css";
 const Articles = () => {
   const articles = useLoaderData();
 
-
-
   return (
     <div className="articles">
       <SectionTitle title="Quotes and articles"></SectionTitle>
       <Container>
         <Quotes></Quotes>
-        <div className="articles-content-warpper">
+        {/* <div className="articles-content-warpper">
           {articles.map((article) => (
             <ArticleContent
               // readMore={readMore}
@@ -24,10 +22,9 @@ const Articles = () => {
               key={article.id}
             ></ArticleContent>
           ))}
-        </div>
+        </div> */}
+        <h2 style={{textAlign:"center", color:"white"}}>Article will add soooooon</h2>
       </Container>
-
-
     </div>
   );
 };

@@ -1,17 +1,17 @@
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  GithubAuthProvider,
+  GoogleAuthProvider,
   onAuthStateChanged,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
-  signInWithPopup,
-  GoogleAuthProvider,
-  GithubAuthProvider,
 } from "firebase/auth";
 
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import app from "../firebase/firebase.config";
 export const AuthContext = createContext();
@@ -22,6 +22,7 @@ const UserContext = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const [error, setError] = useState("");
+  const [user, setUser] = useState({});
 
   // create user
   const createUser = (email, password) => {
@@ -91,6 +92,24 @@ const UserContext = ({ children }) => {
       });
   };
 
+  // store user value 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      return () => {
+        unsubscribe();
+      };
+    });
+  }, []);
+
+  // log out 
+  const logout = () => {
+    signOut(auth).then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
   const authInfo = {
     setError,
     error,
@@ -100,6 +119,8 @@ const UserContext = ({ children }) => {
     resetPassword,
     googleSignIn,
     githubSignIn,
+    user,
+    logout
   };
   return (
     <div>

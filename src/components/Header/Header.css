@@ -75,7 +75,7 @@
   color: white;
 }
 
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 910px) {
   .header-wrapper {
     display: block;
     top: 0 !important;
@@ -87,7 +87,7 @@
     border: 1px solid #121d38;
     width: 90%;
     left: 20px;
-    margin-top: 410px;
+    margin-top: 440px;
     position: fixed;
     background: #0b1222;
     padding: 20px 0;
@@ -109,8 +109,9 @@
   background: transparent !important;
 }
 
-/* @media screen and (max-width: 762px) {
-  .nav-item {
-    display: block;
-  }
-} */
+.welcome-user {
+  color: #0284c7 !important;
+}
+.welcome-user:hover {
+  background: transparent !important;
+}

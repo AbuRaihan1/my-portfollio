@@ -53,6 +53,12 @@ const Header = () => {
           >
             Contact
           </NavLink>
+          {user?.uid && (
+            <Link to="" className="welcome-user">
+              welcome, {user.displayName}
+            </Link>
+          )}
+
           {user?.uid ? (
             <button onClick={logout}>
               <div className="btn-wrap-login">

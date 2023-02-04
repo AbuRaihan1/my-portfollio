@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import loginImage from './Key.gif'
+import loginImage from "./Key.gif";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";
@@ -72,6 +72,11 @@ const Login = () => {
                     Forget password?
                   </Link>
                   <button>Log in </button>
+                  <div className="or-wrapper">or</div>
+                  <div className="continue-with-btns">
+                    <button>Continue with google</button>
+                    <button>Continue with github</button>
+                  </div>
                 </div>
               </div>
             </Col>

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import ErrorElements from "../components/ErrorElements/ErrorElements";
 import Home from "../components/Home/Home";

@@ -10,9 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <UserContext>
-        <ParticlesBackground />
-      <App>
-      </App>
+      <ParticlesBackground />
+      <App></App>
     </UserContext>
   </React.StrictMode>
 );

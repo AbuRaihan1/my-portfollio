@@ -12,12 +12,14 @@ import {
 } from "firebase/auth";
 
 import React, { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import app from "../firebase/firebase.config";
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const UserContext = ({ children }) => {
+  // const navigate = useNavigate()
   // auth providers.
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
@@ -75,6 +77,7 @@ const UserContext = ({ children }) => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         Swal.fire("Logged in", "you are logged in by Google", "success");
+        // navigate('/')
       })
       .catch((error) => {
         console.log(error.message);
@@ -86,13 +89,14 @@ const UserContext = ({ children }) => {
     signInWithPopup(auth, githubProvider)
       .then((result) => {
         Swal.fire("Logged in", "you are logged in by github", "success");
+        // navigate('/')
       })
       .catch((error) => {
         console.log(error.message);
       });
   };
 
-  // store user value 
+  // store user value
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -102,14 +106,16 @@ const UserContext = ({ children }) => {
     });
   }, []);
 
-  // log out 
+  // log out
   const logout = () => {
-    signOut(auth).then(() => {
-      // Sign-out successful.
-    }).catch((error) => {
-      // An error happened.
-    });
-  }
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   const authInfo = {
     setError,
     error,
@@ -120,7 +126,7 @@ const UserContext = ({ children }) => {
     googleSignIn,
     githubSignIn,
     user,
-    logout
+    logout,
   };
   return (
     <div>

@@ -2,10 +2,13 @@ import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import loginImage from "./Key.gif";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContext";
 import Swal from "sweetalert2";
 const Login = () => {
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState("");
   const { logIn, error, setError, resetPassword, googleSignIn, githubSignIn } =
     useContext(AuthContext);
@@ -21,6 +24,7 @@ const Login = () => {
         setError("");
         Swal.fire("congrats!", "you are logged now", "success");
         form.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         if (error.message === "Firebase: Error (auth/wrong-password).") {

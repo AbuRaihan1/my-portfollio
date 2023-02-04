@@ -9,6 +9,7 @@ import Project from "../components/Project/Project";
 import Articles from "../components/QuotesAndArticles/Articles";
 import Services from "../components/Services/Services";
 import Main from "../layout/Main";
+import PrivateRoutes from "./PrivateRoutes";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/articles",
-        element: <Articles></Articles>,
+        element: (
+          <PrivateRoutes>
+            <Articles></Articles>
+          </PrivateRoutes>
+        ),
         loader: async () => {
           return fetch(`/json/Articles.json`);
         },

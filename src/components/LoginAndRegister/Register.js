@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Contexts/UserContext";
 import "./login.css";
 import loginImage from "./login.gif";
 const Register = () => {
+  const navigate = useNavigate()
   const {
     createUser,
     error,
@@ -27,6 +28,7 @@ const Register = () => {
         Swal.fire("congrats!", "you are Registred now", "success");
         form.reset();
         updateUserName(name);
+        navigate('/')
       })
       .catch((error) => {
         if (

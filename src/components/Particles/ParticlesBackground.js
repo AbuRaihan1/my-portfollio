@@ -87,7 +87,7 @@ const ParticlesBackground = () => {
                 top: "out",
               },
               random: true,
-              speed: 4,
+              speed: 1,
             },
             number: {
               density: {

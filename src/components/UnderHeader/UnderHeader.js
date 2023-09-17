@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TypeWriterEffect from "react-typewriter-effect";
-import logo from "../../logo.svg";
+// import logo from "../../logo.svg";
+import logo from "../../../src/images/raihan_formal.jpg";
 import "./UnderHeader.css";
 const UnderHeader = () => {
   return (
@@ -48,7 +49,12 @@ const UnderHeader = () => {
           </div>
         </div>
         <div className="underHeader-img-side common-underHeader-div">
-          <img src={logo} alt="" />
+          <img
+            src={logo}
+            alt=""
+            className=""
+            // style={{ height: "500px", width: "500px", borderRadius: "50%" }}
+          />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import logo from "../../logo.svg";
+import logo from "../../../src/images/raihan_formal.jpg";
 import SectionTitle from "../SectionTItle/SectionTitle";
 import "./About.css";
 const About = () => {
